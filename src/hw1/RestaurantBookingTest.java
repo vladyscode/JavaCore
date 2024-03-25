@@ -1,4 +1,4 @@
-package HW1;
+package hw1;
 
 public class RestaurantBookingTest {
     public static void main(String[] args) {

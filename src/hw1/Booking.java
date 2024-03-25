@@ -1,16 +1,15 @@
-package HW1;
+package hw1;
 
 import java.time.LocalDateTime;
-import java.util.UUID;
 
 public class Booking {
-    private static int counterForID = 0;
+    private static int COUNTER_FOR_ID = 0;
     private String name;
     private long phoneNumber;
     private int numberOfPeople;
     private String dateForBooking;
     private LocalDateTime bookingTime;
-    private int ID;
+    private int id;
 
 
     public Booking(String name, long phoneNumber, int numberOfPeople, String dateForBooking) {
@@ -19,11 +18,7 @@ public class Booking {
         this.numberOfPeople = numberOfPeople;
         this.dateForBooking = dateForBooking;
         this.bookingTime = LocalDateTime.now();
-        this.ID = counterForID++;
-    }
-
-    private String generateUniqueId() {
-        return UUID.randomUUID().toString();
+        this.id = COUNTER_FOR_ID++;
     }
 
     public String getName() {
@@ -54,8 +49,8 @@ public class Booking {
         return bookingTime;
     }
 
-    public int getID() {
-        return ID;
+    public int getId() {
+        return id;
     }
 
     public void printBookingInfo() {
@@ -64,6 +59,6 @@ public class Booking {
         System.out.println("Number of people: " + numberOfPeople);
         System.out.println("Date for booking: " + dateForBooking);
         System.out.println("Booking time: " + bookingTime);
-        System.out.println("ID: " + ID);
+        System.out.println("ID: " + id);
     }
 }
